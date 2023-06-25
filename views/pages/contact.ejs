@@ -1,0 +1,145 @@
+<% if(!currentUser) {%>
+    <% layout('layouts/boilerplate')%>
+    <% } else {%>
+      <% layout('layouts/boilerlogin')%>
+      <% } %>
+    <style>
+      
+   
+        .container {
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .card.left {
+            margin-right: 25px;
+            padding: 15px;
+            width: 38%;
+            background-color: black;
+            color: white;
+            margin-bottom: 0%;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    animation: l-t 1s ease 0.2s 1 normal;
+    background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+        .card.right {
+            margin-left: 25px;
+            padding: 15px;
+            width: 37%;
+            background-color: black;
+            color: white;
+            animation: r-t 1s ease 0.2s 1 normal;
+            margin-bottom: 0%;
+            background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+        .mail{
+    width: 68%;
+    display: block;
+    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+    color: white;
+    margin-top: 0;
+    margin-bottom: 30px;
+    margin-left: 16%;
+    height: 45px;
+    text-align:center;
+    border-radius: 40px;
+    font-family: fantasy;
+    letter-spacing:1px;
+    font-size: 1.5rem;
+    padding: 4px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.address{
+    font-size: larger;
+}
+@media (max-width:450px) {
+    .container{
+        flex-direction: column;
+        width: 75%;
+        margin: 10px;
+        padding: 0;
+    }
+    .card.card.left{
+       
+            padding: 5px;
+            width: 95%;
+            background-color: black;
+            color: white;
+            margin-bottom: 1%;
+            
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    animation: l-t 1s ease 0.2s 1 normal;
+    background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.card.right {
+           
+            padding: 5px;
+            width: 95%;
+            margin-left: 0;
+            background-color: black;
+            color: white;
+            animation: r-t 1s ease 0.2s 1 normal;
+            margin-bottom: 0%;
+            background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+        .mail{
+            width: 70%;
+    display: inline-block;
+    background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 4%;
+    height: 90px;
+    text-align: center;
+    border-radius: 15px;
+    font-family: fantasy;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    padding: 4px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+   }
+@keyframes l-t {
+from{
+    transform:translateX(-1000px);
+}
+ to{
+    transform:translateX(0);
+ }
+    
+}
+@keyframes r-t {
+from{
+    transform:translateX(1000px);
+}
+ to{
+    transform:translateX(0);
+ }
+    
+}
+    </style>
+    <div class="maindiv">
+    <div class="container">
+        <div class="card left">
+            <h2>MUMBAI (HEAD OFFICE)</h2>
+            <span  class="address">Address:</span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut reprehenderit inventore harum ullam
+            voluptatem alias vero aspernatur omnis saepe nobis repellat quia, ipsa reiciendis commodi cumque quos
+            dolorem fuga? Velit est qui magnam minus harum possimus obcaecati impedit perferendis. Fugit libero
+           
+        </div>
+        <div class="card right">
+            <h2>PANVEL (OFFICE)</h2>
+            <span class="address">Address:</span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut reprehenderit inventore harum ullam voluptatem
+            alias vero aspernatur omnis saepe nobis repellat quia, ipsa reiciendis commodi cumque quos dolorem fuga?
+            Velit est qui magnam minus harum possimus obcaecati impedit perferfacilis
+        </div>
+    </div>
+    <div class="mail">FOR ANY QUERY MAIL US <i class="fa-regular fa-envelope"></i> @DanceBeat.gmail.com</div>
+</div>

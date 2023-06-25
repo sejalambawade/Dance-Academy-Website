@@ -1,0 +1,152 @@
+<% if(!currentUser) {%>
+    <% layout('layouts/boilerplate')%>
+    <% } else {%>
+      <% layout('layouts/boilerlogin')%>
+      <% } %>
+<style>
+   body{
+    background: black;
+   }
+    .section1-Left,.section2,.section3{
+        display: flex;
+    }
+    .abt,.abt3{
+        color: white;
+        margin-bottom: 50px;
+        margin-right: 40px;
+        display: flex;
+        width:75%;
+        animation: abt-t 1s ease 0.2s 1 normal;
+        font-family: Arial, Helvetica, sans-serif;
+       
+    }
+    .abt2{
+        color: white;
+        margin:50px 20px;
+        display: flex;
+        width:75%;
+        animation: abt3-t 1s ease 0.2s 1 normal;
+    }
+    .text {
+        margin-left: 5%;
+        text-align:left;
+        font-size: 3rem;
+        color:orange;
+        text-shadow: 2px 2px white;
+        padding: 2rem 0;
+        font-family:fantasy;
+        animation: img1-t 1s ease 0.2s 1 normal;
+}
+.img-1,.img-3{
+    margin-bottom: 50px;
+        margin-right: 40px;
+    animation: img1-t 1s ease 0.2s 1 normal;
+  height: 350px;
+width: 40%;
+align-self: auto;
+margin-top: 10px;
+border-radius: 6px;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.img-2{
+    margin:60px 20px;
+    animation: img2-t 1s ease 0.2s 1 normal;
+    height: 350px;
+width: 40%;
+align-self: auto;
+border-radius: 6px;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+@keyframes abt-t {
+from{
+    transform:translateX(-1000px);
+}
+ to{
+    transform:translateX(0);
+ }
+    
+}
+@keyframes abt3-t {
+from{
+    transform:translateX(1000px);
+}
+ to{
+    transform:translateX(0);
+ }
+    
+}
+@keyframes img2-t {
+from{
+    transform:translateX(-1000px);
+}
+ to{
+    transform:translateX(0);
+ }
+    
+}
+@keyframes img1-t {
+from{
+    transform:translateX(1000px);
+}
+ to{
+    transform:translateX(0);
+ }
+    
+}
+</style>
+    <div class="container">
+        <h1 class="text">ABOUT US</h1>
+        <div class="section1-Left ">
+            <div class="abt">
+               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae quas enim,
+                consequuntur iure molestias ad quia aliquid voluptates atque exercitationem illo est quibusdam. Itaque
+                at sed, alias odit perferendis cum facere obcaecati necessitatibus? Est repudiandae officiis
+                perferendis? Voluptas repellendus officiis cum architecto dolores corrupti fuga vero. Reiciendis dolore
+                a est. Doloremque quis voluptate nulla tenetur, asperiores voluptatum libero ipsam autem repellendus
+                ratione nihil magni in cum ex vitae pariatur, esse dignissimos architecto maxime deleniti recusandae!
+                Non maiores, delectus eos minima laborum deleniti sequi placeat. Asperiores, cumque iure? Doloribus
+                pariatur cum quia quam est deserunt, qui ab rem, nemo provident, temporibus ipsam dolore. Quibusdam
+                ullam perspiciatis rem, minus vero quas magni dolore cupiditate nesciunt expedita nemo, deleniti
+                officiis corrupti beatae velit aut consectetur. Iure debitis laborum, veniam atque libero eos ex
+               cepturi a sed reiciendis vero sunt doloremque, nostrum earum modi? Culpa nostrum
+                minus  culpa? Consequuntur molestiae nam, impedit nulla quibusdam suscipit
+                cumque at it cum sapiente tempore nihil, soluta quam minima.
+             </div>
+            <img class="img-1"src="https://th.bing.com/th/id/OIP.5IFMSSmTlKkCNEexQ4IGHgHaDI?w=350&h=148&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+        </div>
+        <div class="section2">
+            <img class="img-2"src="https://th.bing.com/th/id/OIP.cMjxaWLtNJdDXKYeiBZkywHaEK?w=289&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+            <div class="abt2">
+               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae quas enim,
+                consequuntur iure molestias ad quia aliquid voluptates atque exercitationem illo est quibusdam. Itaque
+                at sed, alias odit perferendis cum facere obcaecati necessitatibus? Est repudiandae officiis
+                perferendis? Voluptas repellendus officiis cum architecto dolores corrupti fuga vero. Reiciendis dolore
+                a est. Doloremque quis voluptate nulla tenetur, asperiores voluptatum libero ipsam autem repellendus
+                ratione nihil magni in cum ex vitae pariatur, esse dignissimos architecto maxime deleniti recusandae!
+                Non maiores, delectus eos minima laborum deleniti sequi placeat. Asperiores, cumque iure? Doloribus
+                pariatur cum quia quam est deserunt, qui ab rem, nemo provident, temporibus ipsam dolore. Quibusdam
+                ullam perspiciatis rem, minus vero quas magni dolore cupiditate nesciunt expedita nemo, deleniti
+                officiis corrupti beatae velit aut consectetur. Iure debitis laborum, veniam atque libero eos ex
+                perferendimolestiae facere alias magnam unde ipsum at accusantium, excepturi quis
+                laboaperiam nostrum officiis quidem sit cum sapiente tempore nihil, soluta quam minima.
+             </div>
+        </div>
+        <div class="section3">
+            <div class="abt3">
+               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae quas enim,
+                consequuntur iure molestias ad quia aliquid voluptates atque exercitationem illo est quibusdam. Itaque
+                at sed, alias odit perferendis cum facere obcaecati necessitatibus? Est repudiandae officiis
+                perferendis? Voluptas repellendus officiis cum architecto dolores corrupti fuga vero. Reiciendis dolore
+                a est. Doloremque quis voluptate nulla tenetur, asperiores voluptatum libero ipsam autem repellendus
+                ratione nihil magni in cum ex vitae pariatur, esse dignissimos architecto maxime deleniti recusandae!
+                Non maiores, delectus eos minima laborum deleniti sequi placeat. Asperiores, cumque iure? Doloribus
+                pariatur cum quia quam est deserunt, qui ab rem, nemo provident, temporibus ipsam dolore. Quibusdam
+                ullam perspiciatis rem, minus vero quas magni dolore cupiditate nesciunt expedita nemo, deleniti
+                officiis corrupti beatae velit aut consectetur. Iure debitis laborum, veniam atque libero eos ex
+                perferendis cumllo. Maiores dolor nulla distinctio autem repellendus molestiae explicabo
+                quaeratas harum iure quo nihil repellat? Ea, impedit dignissimos aut doloremque quibusdam
+                aspernatur et neque aperiam nostrum officiis quidem sit cum sapiente tempore nihil, soluta quam minima.
+             </div>
+            <img class="img-1"src="https://th.bing.com/th/id/OIP.mkLRI4b-dUuNHpilAFOX5AHaD4?w=345&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+        </div>
+    </div>

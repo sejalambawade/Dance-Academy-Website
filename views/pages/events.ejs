@@ -1,0 +1,225 @@
+<% layout('layouts/boilerplate')%>
+  <style>
+    body {
+      background-color: black;
+    }
+
+    .slider {
+      margin-top: 100px;
+      margin-left: 500px;
+      position: relative;
+      width: 180px;
+      height: 200px;
+      transform-style: preserve-3d;
+      animation: rotate 30s linear infinite;
+      margin-bottom: 60px;
+    }
+
+    @keyframes rotate {
+
+      0% {
+        transform: perspective(1000px) rotateY(0deg);
+      }
+
+      100% {
+        transform: perspective(1000px) rotateY(360deg);
+      }
+    }
+
+    .slider span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+      transform-style: preserve-3d;
+      transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+    }
+
+    .slider span img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 100px;
+      object-fit: cover;
+      transition: 2s;
+
+    }
+
+    .slider span:hover img {
+      transform: translateY(-30px) scale(1.1);
+    }
+
+    @keyframes rotate {
+
+      0% {
+        transform: perspective(1000px) rotateY(0deg);
+      }
+
+      100% {
+        transform: perspective(1000px) rotateY(360deg);
+      }
+    }
+
+    .slider span {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+      transform-style: preserve-3d;
+      transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
+    }
+
+    .slider span img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 100px;
+      object-fit: cover;
+      transition: 2s;
+
+    }
+
+    .slider span:hover img {
+      transform: translateY(-30px) scale(1.1);
+    }
+  .container{
+    display: flex;
+    justify-content: space-around;
+  }
+    .rotitle {
+      text-align: center;
+      font-size: 3rem;
+      font-family: fantasy;
+      color: orange;
+      text-shadow: 2px 2px white;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .content{
+      font-size: 1rem;
+      font-family: fantasy;
+      color: white;
+      margin:15px 12px;
+      animation: l-t 1s ease 0.2s 1 normal;
+      padding: 8px;
+
+    }
+    .content1{
+      font-size: 1rem;
+      font-family: fantasy;
+      color: white;
+      margin:15px 12px;
+      animation: r-t 1s ease 0.2s 1 normal;
+      padding: 8px;
+    
+    }
+    .img1{
+      border-radius: 5px;
+      margin:15px 12px;
+      animation: r-t 1s ease 0.2s 1 normal;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .img2{
+      border-radius: 5px;
+      margin:15px 12px;
+      animation: l-t 1s ease 0.2s 1 normal;
+
+    }
+    @keyframes l-t {
+from{
+    transform:translateX(-1000px);
+}
+ to{
+    transform:translateX(0);
+ }
+    
+}
+@keyframes r-t {
+from{
+    transform:translateX(1000px);
+}
+ to{
+    transform:translateX(0);
+ }
+    
+}
+  </style>
+  <h1 class="rotitle">EVENTS</h1>
+  <div class="container">
+    <div class="content"> Attending workshops is a fantastic way for dancers to broaden their experience, step outside
+      their comfort zones, make connections and discover new ways to move and create.Often when attending a workshop
+      you’ll be in a completely new space with lots of new people. Sometimes this can be quite overwhelming but you
+      should remember that you’re all there for the same reason; because you love to dance!.Every workshop is run
+      completely different to the next, but as a general outline here’s what to expect. Most workshops run a warm-up at
+      the beginning of class but to be safe you should warm yourself up while you wait just in case. Then depending on
+      the workshop, you’ll either begin some sort of exercise or combo. Many workshops will involve a lot of listening,
+      as teachers tend to have a specific message or goal to share, use this down-time to really apply any corrections
+      and share their vision during class.</div>
+    <img class="img1" src="https://th.bing.com/th/id/OIP.SlNTGoUEvrH6BSuRbCVCVgHaFX?w=243&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+  </div>
+  <h1 class="rotitle">Delhi Dance battle (DDB)</h1>
+  <div class="container">
+    <img class="img2" src="https://th.bing.com/th/id/OIP.VpcjrD8-gk1YPmeBy0P2igHaEK?w=317&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+    <div class="content1"> Attending workshops is a fantastic way for dancers to broaden their experience, step outside
+      their comfort zones, make connections and discover new ways to move and create.Often when attending a workshop
+      you’ll be in a completely new space with lots of new people. Sometimes this can be quite overwhelming but you
+      should remember that you’re all there for the same reason; because you love to dance!.Every workshop is run
+      completely different to the next, but as a general outline here’s what to expect. Most workshops run a warm-up at
+      the beginning of class but to be safe you should warm yourself up while you wait just in case. Then depending on
+      the workshop, you’ll either begin some sort of exercise or combo. Many workshops will involve a lot of listening,
+      as teachers tend to have a specific message or goal to share, use this down-time to really apply any corrections
+      and share their vision during class.</div>
+  </div>
+  <div class="container">
+    <div class="content"> Attending workshops is a fantastic way for dancers to broaden their experience, step outside
+      their comfort zones, make connections and discover new ways to move and create.Often when attending a workshop
+      you’ll be in a completely new space with lots of new people. Sometimes this can be quite overwhelming but you
+      should remember that you’re all there for the same reason; because you love to dance!.Every workshop is run
+      completely different to the next, but as a general outline here’s what to expect. Most workshops run a warm-up at
+      the beginning of class but to be safe you should warm yourself up while you wait just in case. Then depending on
+      the workshop, you’ll either begin some sort of exercise or combo. Many workshops will involve a lot of listening,
+      as teachers tend to have a specific message or goal to share, use this down-time to really apply any corrections
+      and share their vision during class.</div>
+    <img class="img1" src="https://th.bing.com/th/id/OIP.DwCNg8dfq4IvTDBl2pJowAHaE8?w=282&h=187&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+  </div>
+  <h1 class="rotitle">OUR PREVIOUS YEAR GUESTS FOR WORKSHOP</h1>
+  <div class="slider">
+
+    <span style="--i:1;"><img
+        src="https://th.bing.com/th/id/OIP._L20D9GPBMNweSyAqkViTgHaEK?w=301&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"></span>
+
+
+
+    <span style="--i:2;"><img
+        src="https://th.bing.com/th/id/OIP.w0CeXmDbhpLzTZZI4Xt_0QHaFj?w=231&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"></span>
+
+
+    <span style="--i:3;"><img
+        src="https://th.bing.com/th/id/OIP.QcBLzpV-H798YUJj0pz0UgHaEK?w=267&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"></span>
+
+
+    <span style="--i:4;"><img
+        src="https://th.bing.com/th/id/OIP.kR4j0qoxyJnMosw_z7R7tgHaE8?w=298&h=199&c=7&r=0&o=5&dpr=1.5&pid=1.7"></span>
+
+
+    <span style="--i:5;"><img
+        src="https://th.bing.com/th/id/OIP.L2fwUMT5AnBhxwUYd1xqqgHaF0?w=245&h=193&c=7&r=0&o=5&dpr=1.5&pid=1.7"></span>
+
+    <span style="--i:6;"><img
+        src="https://th.bing.com/th/id/OIP.-UvzH1JlZAGtyUfRWZpFuwHaJQ?w=160&h=201&c=7&r=0&o=5&dpr=1.5&pid=1.7"></span>
+
+    <span style="--i:7;"><img
+        src="https://th.bing.com/th/id/OIP.qFFEF7pckODJVcP3mBsAEwHaFR?w=235&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"></span>
+
+    <span style="--i:8;"><img
+        src="https://th.bing.com/th/id/OIP.GqHQkCfdBBy6L1coNdwhyAHaHa?w=203&h=203&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+    </span>
+  </div>

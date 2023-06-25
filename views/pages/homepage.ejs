@@ -1,0 +1,673 @@
+<%- layout('layouts/boilerplate')%>
+  <style>
+    .bar {
+      background-color: white;
+      border-radius: 10px;
+      height: 4px;
+      width: 100%;
+    }
+
+    .navigation-wrap.start-header.start-style {
+      width: 100%;
+      padding: 0%;
+      margin: 0%;
+      background-color: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    .contain {
+      width: 100%;
+    }
+
+    .navbar.navbar-expand-md.navbar-light {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 0%;
+      margin: 0%;
+      justify-content: space-between;
+    }
+
+    .btn {
+      color: white;
+    }
+
+    .btn:hover {
+      color: orange;
+    }
+
+    .carouselExampleAutoplaying {
+      width: 95%;
+      height: 500px;
+
+    }
+
+    .carousel-container {
+      display: flexbox;
+      width: 100%;
+      height: 500px;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 500px;
+    }
+
+    .carousel-item.active img {
+      width: 100%;
+      height: 500px;
+    }
+
+    .slider {
+      margin-top: 100px;
+      margin-left: 500px;
+      position: relative;
+      width: 200px;
+      height: 220px;
+      transform-style: preserve-3d;
+      animation: rotate 30s linear infinite;
+    }
+
+    .carouselExampleAutoplaying {
+      width: 95%;
+      height: 500px;
+
+    }
+
+    .carousel-container {
+      width: 100%;
+      height: 500px;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 500px;
+      display: block;
+    }
+
+    .dance1{
+      top:170px;
+      left:30%;
+      position: absolute;
+      color: white;
+      font-size:6rem;
+      width: 100%;
+      font-family: fantasy;
+      font-style: italic; 
+      animation: l-t 0.4s ease 0s 1 normal;   
+
+    }
+    .beat{
+     
+      top:170px;
+      left:40%;
+      position: absolute;
+      color: white;
+      font-size:7rem;
+      width: 100%;
+      font-family: fantasy;
+      font-style: italic; 
+      animation: l-t 0.4s ease 0s 1 normal;   
+
+    }
+    .dspan{
+    
+      position: absolute;
+      top:254px;
+      font-style: normal;
+      left:40%;
+    font-size: 3rem;
+     display: inline;
+     font-family: fantasy;font-family: fantasy;
+    z-index: 1;
+    font-style: italic; 
+    color: white;
+    animation: l-t 0.4s ease 0s 1 normal; 
+   
+        }
+
+    .carousel-item.active img {
+      width: 100%;
+      height: 500px;
+    }
+    @keyframes l-t {
+from{
+    transform:translateX(-1000px);
+}
+ to{
+    transform:translateX(0);
+ }
+    
+}
+
+@keyframes dst {
+from{
+    transform:translateX(0);
+}
+ to{
+    transform:translateY(-10px);
+ }
+    
+}
+@keyframes dsh {
+from{
+   
+}
+ to{
+   display: none;
+ }
+    
+}
+ @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      list-style-type: none;
+      text-decoration: none;
+    }
+
+    :root {
+      --primary: #ec994b;
+      --white: #ffffff;
+      --bg: #f5f5f5;
+    }
+
+    html {
+      font-size: 62.5%;
+      font-family: "Montserrat", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    @media (min-width: 1440px) {
+      html {
+        zoom: 1.5;
+      }
+    }
+
+    @media (min-width: 2560px) {
+      html {
+        zoom: 1.7;
+      }
+    }
+
+    @media (min-width: 3860px) {
+      html {
+        zoom: 2.5;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      width: 1.3rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 1rem;
+      background: #797979;
+      transition: all 0.5s ease-in-out;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #222224;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f9f9f9;
+    }
+
+    body {
+      font-size: 1.6rem;
+      background: var(--bg);
+    }
+
+    .container {
+      max-width: 124rem;
+      padding: 0 1rem;
+      margin: 0 auto;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .section-heading {
+      font-size: 3rem;
+      color: var(--primary);
+      padding: 2rem 0;
+    }
+
+    #tranding {
+      padding: 4rem 0;
+      background-color: black;
+    }
+
+    @media (max-width:1440px) {
+      #tranding {
+        padding: 7rem 0;
+      }
+    }
+
+    #tranding .tranding-slider {
+      height: 52rem;
+      padding: 2rem 0;
+      position: relative;
+    }
+
+    @media (max-width:500px) {
+      #tranding .tranding-slider {
+        height: 45rem;
+      }
+    }
+
+    .tranding-slide {
+      width: 37rem;
+      height: 42rem;
+      position: relative;
+    }
+
+    @media (max-width:500px) {
+      .tranding-slide {
+        width: 28rem !important;
+        height: 36rem !important;
+      }
+
+      .tranding-slide .tranding-slide-img img {
+        width: 28rem !important;
+        height: 36rem !important;
+      }
+    }
+
+    .tranding-slide .tranding-slide-img img {
+      width: 37rem;
+      height: 42rem;
+      border-radius: 2rem;
+      object-fit: cover;
+    }
+
+    .tranding-slide .tranding-slide-content {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .tranding-slide-content .food-price {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      color: var(--white);
+    }
+
+    .tranding-slide-content .tranding-slide-content-bottom {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      color: var(--white);
+    }
+
+
+
+    .swiper-slide-shadow-left,
+    .swiper-slide-shadow-right {
+      display: none;
+    }
+
+    .tranding-slider-control {
+      position: relative;
+      bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tranding-slider-control .swiper-button-next {
+      left: 58% !important;
+      transform: translateX(-58%) !important;
+    }
+
+    @media (max-width:990px) {
+      .tranding-slider-control .swiper-button-next {
+        left: 70% !important;
+        transform: translateX(-70%) !important;
+      }
+    }
+
+    @media (max-width:450px) {
+      .tranding-slider-control .swiper-button-next {
+        left: 80% !important;
+        transform: translateX(-80%) !important;
+      }
+    }
+
+    @media (max-width:990px) {
+      .tranding-slider-control .swiper-button-prev {
+        left: 30% !important;
+        transform: translateX(-30%) !important;
+      }
+    }
+
+    @media (max-width:450px) {
+      .tranding-slider-control .swiper-button-prev {
+        left: 20% !important;
+        transform: translateX(-20%) !important;
+      }
+    }
+
+    .tranding-slider-control .slider-arrow {
+      background: var(--white);
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      left: 42%;
+      transform: translateX(-42%);
+      filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+    }
+
+    .tranding-slider-control .slider-arrow ion-icon {
+      font-size: 2rem;
+      color: #222224;
+    }
+
+    .tranding-slider-control .slider-arrow::after {
+      content: '';
+    }
+
+    .tranding-slider-control .swiper-pagination {
+      position: relative;
+      width: 15rem;
+      bottom: 1rem;
+    }
+
+    .tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
+      filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+      background: var(--white);
+    }
+
+    .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
+      background: var(--primary);
+    }
+
+    @media (max-width:600px) {
+      .toggle-button {
+        display: flex;
+      }
+
+      .mobile-none.topnev-right ul li {
+        display: flex;
+        width: 100%;
+      }
+
+      .cont {
+        flex-direction: column;
+      }
+
+      .mobile-none.topnev-right {
+        width: 100%;
+      }
+
+      .mobile-none.topnev-right ul {
+        width: 100%;
+        justify-items: space-between;
+        list-style-type: none;
+        flex-direction: column;
+        color: white;
+      }
+
+      .mobile-none.topnev-right ul li {
+        width: 100%;
+        text-align: center;
+        height: 30px;
+      }
+
+      .mobile-none.topnev-right ul li a {
+        width: 100%;
+        text-align: center;
+      }
+
+      .mobile-none.topnev-right ul li a:hover {
+        width: 100%;
+        text-align: center;
+        background-color: rgb(74, 72, 72);
+        color: orange;
+      }
+    }
+
+  </style>
+
+  <div class="carousel-container">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img 
+            src="https://th.bing.com/th?id=OIP.U-SF9BZsIsH-05RUDUmgSQHaEO&w=331&h=188&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2"
+            class="d-block w-100" alt="...">
+            <div class="dance1">
+            </div>
+            <div class="beat"> DANCE BEAT</div>
+            <span class="dspan"> Dance to your heartbeat</span>
+        
+            
+        </div>
+        <div class="carousel-item">
+         <img src="https://th.bing.com/th/id/OIP.njGIHuArahP8HIcTsv77ZAHaE7?w=250&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+            class="d-block w-100" alt="...">
+            <div class="dance1">
+              EXPLORE THE JOY WITHIN YOU..
+            </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://th.bing.com/th/id/OIP.mwXG89_R1tvDZMOfCXKMCgHaEK?w=318&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+            class="d-block w-100" alt="...">   
+   
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <!-- <div class="slide hi-slide">
+              <div class="hi-prev"></div>
+              <div class="hi-next"></div>
+              <ul>
+                <li><img src="https://th.bing.com/th/id/OIP.HMzvmRx6AOkDZhDfCFUgAAHaHZ?w=201&h=200&c=7&r=0&o=5&dpr=1.5&pid=1.7"></li>
+                <li><img src="https://th.bing.com/th/id/OIP.21N6MjNZpoyMt_5iDbUKKAHaLH?w=203&h=304&c=7&r=0&o=5&dpr=1.5&pid=1.7"></li>
+                <li><img src="https://th.bing.com/th/id/OIP.H4ge-UQLwHTGHx73cLX7fAHaLF?w=203&h=303&c=7&r=0&o=5&dpr=1.5&pid=1.7"></li>
+                <li><img src="https://th.bing.com/th/id/OIP.eggnPwDqzO8O_bhy-FqWnAHaJa?pid=ImgDet&w=200&h=254&c=7&dpr=1.5"></li>
+                <li><img src="https://th.bing.com/th/id/OIP.yUeH4z08CblykcDWvIJb_AHaLH?w=122&h=183&c=7&r=0&o=5&dpr=1.5&pid=1.7"></li>
+             <li><img src="https://th.bing.com/th/id/OIP.DRuDjQ32P6Bkanxttb6PegHaLH?w=115&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"></li>
+              </ul>
+
+            </div>
+            <script src="https://code.jquery.com/jquery-3.6.4.js"></script>  
+            <script src="jquery.hislide.js"></script>       
+            <script>
+              $('.slide').hiSlide();
+            </script>
+             -->
+  <section id="tranding">
+    <div class="container">
+      <h3 class="text-center section-subheading">- DANCE FORMS -</h3>
+      <h1 class="text-center section-heading">LETS LEARN TOGETHER...</h1>
+    </div>
+    <div class="container">  
+      <div class="swiper tranding-slider">
+        <div class="swiper-wrapper">
+          <!-- Slide-start -->
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img
+                src="https://th.bing.com/th/id/OIP.H4ge-UQLwHTGHx73cLX7fAHaLF?w=203&h=303&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+                alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+
+              <div class="tranding-slide-content-bottom">
+                <h1 class="food-name">
+                  CLASSICAL
+                </h1>
+              </div>
+            </div>
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img
+                src="https://th.bing.com/th/id/OIP.DRuDjQ32P6Bkanxttb6PegHaLH?w=115&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+                alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+
+              <div class="tranding-slide-content-bottom">
+                <h1 class="food-name">
+                  CONTEMPORARY
+                </h1>
+              </div>
+            </div>
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img
+                src="https://th.bing.com/th/id/OIP.yUeH4z08CblykcDWvIJb_AHaLH?w=122&h=183&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+                alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+
+              <div class="tranding-slide-content-bottom">
+                <h1 class="food-name">
+                  HIP-HOP
+                </h1>
+
+              </div>
+            </div>
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img
+                src="https://th.bing.com/th/id/OIP.kQUO98RClkQXhINlUUmSHwHaJ7?w=203&h=273&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+                alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+
+              <div class="tranding-slide-content-bottom">
+                <h1 class="food-name">
+                  Ballet
+                </h1>
+
+              </div>
+            </div>
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img
+                src="https://th.bing.com/th/id/OIP.mwXG89_R1tvDZMOfCXKMCgHaEK?w=318&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+                alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+
+              <div class="tranding-slide-content-bottom">
+                <h1 class="food-name">
+                  Our Dance Crew
+                </h1>
+
+              </div>
+            </div>
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img
+                src="https://th.bing.com/th/id/OIP.njGIHuArahP8HIcTsv77ZAHaE7?w=250&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+                alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+
+              <div class="tranding-slide-content-bottom">
+                <h1 class="food-name">
+                  Ballet-Crew
+                </h1>
+
+              </div>
+            </div>
+          </div>
+          <!-- Slide-end -->
+          <!-- Slide-start -->
+          <div class="swiper-slide tranding-slide">
+            <div class="tranding-slide-img">
+              <img
+                src="https://th.bing.com/th/id/OIP.HybFoxFwbRJput0ew_tzpAHaEK?w=315&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+                alt="Tranding">
+            </div>
+            <div class="tranding-slide-content">
+
+              <div class="tranding-slide-content-bottom">
+                <h1 class="food-name">
+                  locking-poppin
+                </h1>
+
+              </div>
+            </div>
+          </div>
+          <!-- Slide-end -->
+        </div>
+
+        <div class="tranding-slider-control">
+          <div class="swiper-button-prev slider-arrow">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </div>
+          <div class="swiper-button-next slider-arrow">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>var TrandingSlider = new Swiper('.tranding-slider', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      loop: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2.5,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+  </script>

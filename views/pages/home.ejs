@@ -1,0 +1,516 @@
+<% layout('layouts/boilerlogin')%>
+<style>
+.full{
+        display: flex;
+        justify-content: space-between;
+
+        padding:10px;
+        background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+        
+       
+}
+.OPT{
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.exp{
+font-size: x-large;
+font-style: italic;
+  text-shadow: 1px 1px gray;
+  text-transform: capitalize;
+  font-weight:bold;
+  text-align: center;
+}
+.p-2{
+  background-color: rgb(56, 52, 52);
+  border-color: rgb(109, 37, 37);
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+}
+.p-2:hover{
+ background-color:black;
+ color: orange;
+
+}
+
+    
+       h1,label{
+          
+           font-size: 1.5rem;;
+       }
+       h1{
+           text-align:center;
+       }
+       .event{
+        height: 40%;
+           width: 40%;
+          padding: 5px;
+          
+          border-radius: 13px;
+          background: radial-gradient(circle at 10% 20%, rgb(255, 197, 61) 0%, rgb(255, 94, 7) 90%);
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        
+       }
+       .btn .btn-warning{
+         background-color: orange;
+       }
+       .btn .btn-outline-dark{
+         background-color: orange;
+       }
+       .btn .btn-warning:hover{
+         background-color: black;
+         color:black;
+       }
+       .mb-3 a{
+        position: relative;
+        left: 30px;
+        font-size: 1rem;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: bold;
+       }
+
+     
+       .p-3{
+        background: radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%);
+        box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+       }
+       
+    .card{
+      rotate: -10deg;
+      background: linear-gradient(179.7deg, rgb(248, 126, 126) -0.5%, rgb(251, 206, 143) 35.3%, rgb(184, 252, 233) 67.2%, rgb(95, 149, 230) 92.3%);
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      height: 28%;
+      margin-right: 28px;
+      margin-top: 20px;
+      width:12rem;
+    }
+    .ribbon{
+      height:45px;
+      width:40px;
+      position: absolute;
+    z-index: 1;
+    left: 94%;
+    top: 20%;
+    }
+    .ribbon2{
+      height:45px;
+      width:40px;
+      position: absolute;
+    z-index: 1;
+    left: 94%;
+    top: 44%;
+    }
+    .ribbon3{
+      height:45px;
+      width:40px;
+      position: absolute;
+    z-index: 1;
+    left: 94%;
+    top: 69%;
+    }
+    .card-header{
+      text-transform: uppercase;
+      font-weight: bolder;
+    }
+    /* .aeve{
+        padding: 5px;
+        border-width: 3px;
+        border-color: white;
+        box-shadow: 2px 2px white;
+    } */
+    label{
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: x-large;
+    }
+    .container {
+      width: 32rem;
+      height: 5rem;
+      
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    #tranding {
+     background: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+    }
+    .event-name{
+     color:black;  
+     font-weight:bolder;
+     font-size: 2rem;
+     margin-top: 12px;
+    }
+  
+    #tranding .tranding-slider {
+      height: 23rem;
+      position: relative;
+    }
+    .container h3{
+   position: relative;
+   top:20px;
+ }
+
+    @media (max-width:500px) {
+      #tranding .tranding-slider {
+        height: 45rem;
+      }
+    }
+
+    .tranding-slide {
+      width: 37rem;
+      height:42rem;
+      position: relative;
+      left: 51px;
+    }
+
+    @media (max-width:500px) {
+      .tranding-slide {
+        width: 28rem !important;
+        height: 36rem !important;
+      }
+
+      .tranding-slide .tranding-slide-img img {
+        width: 28rem !important;
+        height: 36rem !important;
+      }
+    }
+
+    .tranding-slide .tranding-slide-img img {
+      width: 30rem;
+      height: 20rem;
+      object-fit: cover;
+      padding: 1px;
+     
+    }
+    .tranding-slide .tranding-slide-img{
+      width: 30.5rem;
+      height: 20.5rem;
+      border: 2px solid rgb(49, 11, 184);
+    }
+    .tranding-slide .tranding-slide-content {
+      position: absolute;
+      left: -90px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 28rem;
+     
+    }
+
+    .tranding-slide-content .tranding-slide-content-bottom {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1rem;
+      color: var(--white);
+      text-transform: uppercase;
+    }
+
+
+
+    .swiper-slide-shadow-left,
+    .swiper-slide-shadow-right {
+      display: none;
+    }
+
+    .tranding-slider-control {
+      position: relative;
+      bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tranding-slider-control .swiper-button-next {
+      left: 58% !important;
+      transform: translateX(-58%) !important;
+    }
+
+    @media (max-width:990px) {
+      .tranding-slider-control .swiper-button-next {
+        left: 70% !important;
+        transform: translateX(-70%) !important;
+      }
+    }
+
+    @media (max-width:450px) {
+      .tranding-slider-control .swiper-button-next {
+        left: 80% !important;
+        transform: translateX(-80%) !important;
+      }
+      .event {
+        display: none;
+      }
+      .topevents {
+        display: none;
+      }
+      
+    }
+
+    @media (max-width:990px) {
+      .tranding-slider-control .swiper-button-prev {
+        left: 30% !important;
+        transform: translateX(-30%) !important;
+      }
+    }
+
+    @media (max-width:450px) {
+      .tranding-slider-control .swiper-button-prev {
+        left: 20% !important;
+        transform: translateX(-20%) !important;
+      }
+    }
+
+    .tranding-slider-control .slider-arrow {
+      background: var(--white);
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      left: 40%;
+      transform: translateX(-42%);
+      filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+    }
+
+    .tranding-slider-control .slider-arrow ion-icon {
+      font-size: 2rem;
+      color: #222224;
+    }
+
+    .tranding-slider-control .slider-arrow::after {
+      content: '';
+    }
+
+    .tranding-slider-control .swiper-pagination {
+      position: relative;
+      width: 15rem;
+      bottom: 1rem;
+    }
+
+    .tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
+      filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+      background: var(--white);
+    }
+
+    .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
+      background: var(--primary);
+    }
+
+    @media (max-width:600px) {
+      .toggle-button {
+        display: flex;
+      }
+
+      .mobile-none.topnev-right ul li {
+        display: flex;
+        width: 100%;
+      }
+
+      .cont {
+        flex-direction: column;
+      }
+
+      .mobile-none.topnev-right {
+        width: 100%;
+      }
+
+      .mobile-none.topnev-right ul {
+        width: 100%;
+        justify-items: space-between;
+        list-style-type: none;
+        flex-direction: column;
+        color: white;
+      }
+
+      .mobile-none.topnev-right ul li {
+        width: 100%;
+        text-align: center;
+        height: 30px;
+      }
+
+      .mobile-none.topnev-right ul li a {
+        width: 100%;
+        text-align: center;
+      }
+
+      .mobile-none.topnev-right ul li a:hover {
+        width: 100%;
+        text-align: center;
+        background-color: rgb(74, 72, 72);
+        color: orange;
+      }
+    }
+
+       </style>
+       <div class="full">
+        <div class="OPT mt-3" style="width:250px;">
+          <p class=" flex mb-3 p-3 mb-3" style="color:white;text-decoration: none; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   font-size: x-large;
+          text-align: end;
+          font-weight: 700;">EXPLORE HERE!</p>
+                <div class="p-3 mb-3"><a href="/addevent" style="color:white;text-decoration: none;">ADD EVENT</a></div>
+                <div class="p-3 mb-3"><a href="/showevents" style="color:white;text-decoration: none;">SHOW EVENT</a></div>
+                <div class="p-3 mb-3"><a href="/addmemories" style="color:white;text-decoration: none;">ADD MEMORIES</a></div>
+                <div class="p-3 mb-3"><a href="/showmemories" style="color:white;text-decoration: none;">SHOW MEMORIES</a></div>
+                <div class="chat p-3 mb-3"><a href="/homepage/<%=user._id%>/chat" style="color:white;text-decoration: none;">CHATROOM</a></div>
+              </div>   
+              <%if((user.Memories.length)!==0){%>
+              <section id="tranding">
+                <div class="container">
+                  <h3 class="text-center section-subheading">- MEMORIES -</h3>
+                </div>
+                <div class="container">  
+                  <div class="swiper tranding-slider">
+                    <div class="swiper-wrapper">
+                      <% for(let meme of user.Memories) {%>  
+                      <div class="swiper-slide tranding-slide">
+                        <div class="tranding-slide-img">
+                          <img
+                            src="<%=meme.images[0].path%>"
+                            alt="Tranding" height="60%" width="70%">
+                        </div>
+                        <div class="tranding-slide-content">
+            
+                          <div class="tranding-slide-content-bottom">
+                            <h1 class="event-name">
+                              Event:-<%=meme.eventname%>
+                            </h1>
+                          </div>
+                        </div>
+                      </div>
+                      <% } %>
+                
+                  
+              
+                     
+                   
+
+                    </div>
+            
+            
+                  </div>
+                </div>
+              </section>
+              <%}%>
+              <%if((user.Memories.length)===0){%>
+    <div class="event mb-2 mt-3">
+        <p class="exp flex mb-3">ADD EVENT HERE!</p>
+        <form class="aeve" action="/addevent" method="POST">
+            <div class="mb-3">
+                <label class="form-label" for="eventdate">Event Date</label>
+                <input class="form-control" type="Date" id="eventdate" name="deadline" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="eventname">Event Name</label>
+                <input class="form-control" type="text" id="eventname" name="eventname" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="eventdetails">Event Details</label>
+                <input class="form-control" type="text" id="eventdetails" name="eventdetails" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <button class="btn btn-dark btn-outline-dark mt-1 mb-1">Add event</button>
+          </form>
+    </div>
+    <%}%>
+   <%if((user.Events.length)>2){%>
+    <div class="topevents mt-2">
+      
+      <img class="ribbon"src="https://th.bing.com/th/id/R.d1a86070645908997cee731a372854a6?rik=YC1yWwNJsB3IqA&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fgoogle%2fnoto-emoji-activities%2f1024%2f52716-ribbon-icon.png&ehk=uImJOYdhVnp2wNmOdDclIu0l8bNqRyzMsxewsx6C3OE%3d&risl=&pid=ImgRaw&r=0">
+      <div class="card border-dark mb-3" style="max-width: 18rem;">
+        <div class="card-header">top 1 event</div>
+        <div class="card-body">
+          <h5 class="card-title"><%=user.Events[0].eventname%></h5>
+          <p class="card-text"><%=user.Events[0].deadline.getDate()+"/"+user.Events[0].deadline.getMonth()+"/"+user.Events[0].deadline.getFullYear()%></p>
+        </div>
+      </div>
+      <img class="ribbon2"src="https://th.bing.com/th/id/R.d1a86070645908997cee731a372854a6?rik=YC1yWwNJsB3IqA&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fgoogle%2fnoto-emoji-activities%2f1024%2f52716-ribbon-icon.png&ehk=uImJOYdhVnp2wNmOdDclIu0l8bNqRyzMsxewsx6C3OE%3d&risl=&pid=ImgRaw&r=0">
+      <div class="card border-dark mb-3" style="max-width: 18rem;">
+        <div class="card-header">top 2 event</div>
+        <div class="card-body">
+          <h5 class="card-title"><%=user.Events[1].eventname%></h5>
+          <p class="card-text"><%=user.Events[1].deadline.getDate()+"/"+user.Events[1].deadline.getMonth()+"/"+user.Events[1].deadline.getFullYear()%></p>
+        </div>
+      </div>
+      <img class="ribbon3"src="https://th.bing.com/th/id/R.d1a86070645908997cee731a372854a6?rik=YC1yWwNJsB3IqA&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fgoogle%2fnoto-emoji-activities%2f1024%2f52716-ribbon-icon.png&ehk=uImJOYdhVnp2wNmOdDclIu0l8bNqRyzMsxewsx6C3OE%3d&risl=&pid=ImgRaw&r=0">
+      <div class="card border-dark mb-3" style="max-width: 18rem;">
+        <div class="card-header">top 3 event</div>
+        <div class="card-body">
+          <h5 class="card-title"><%=user.Events[2].eventname%></h5>
+          <p class="card-text"><%=user.Events[2].deadline.getDate()+"/"+user.Events[2].deadline.getMonth()+"/"+user.Events[2].deadline.getFullYear()%></p>
+        </div>
+      </div>
+      
+    </div>
+    <%} else if((user.Events.length)===2) {%>
+      <div class="topevents mt-2">
+      
+        <img class="ribbon"src="https://th.bing.com/th/id/R.d1a86070645908997cee731a372854a6?rik=YC1yWwNJsB3IqA&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fgoogle%2fnoto-emoji-activities%2f1024%2f52716-ribbon-icon.png&ehk=uImJOYdhVnp2wNmOdDclIu0l8bNqRyzMsxewsx6C3OE%3d&risl=&pid=ImgRaw&r=0">
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+          <div class="card-header">top 1 event</div>
+          <div class="card-body">
+            <h5 class="card-title"><%=user.Events[0].eventname%></h5>
+            <p class="card-text"><%=user.Events[0].deadline.getDate()+"/"+user.Events[0].deadline.getMonth()+"/"+user.Events[0].deadline.getFullYear()%></p>
+          </div>
+        </div>
+        <img class="ribbon2"src="https://th.bing.com/th/id/R.d1a86070645908997cee731a372854a6?rik=YC1yWwNJsB3IqA&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fgoogle%2fnoto-emoji-activities%2f1024%2f52716-ribbon-icon.png&ehk=uImJOYdhVnp2wNmOdDclIu0l8bNqRyzMsxewsx6C3OE%3d&risl=&pid=ImgRaw&r=0">
+        <div class="card border-dark mb-3" style="max-width: 18rem;">
+          <div class="card-header">top 2 event</div>
+          <div class="card-body">
+            <h5 class="card-title"><%=user.Events[1].eventname%></h5>
+            <p class="card-text"><%=user.Events[1].deadline.getDate()+"/"+user.Events[1].deadline.getMonth()+"/"+user.Events[1].deadline.getFullYear()%></p>
+          </div>
+        </div>
+        <%} else if((user.Events.length)===1) {%>
+          <div class="topevents mt-2">
+      
+            <img class="ribbon"src="https://th.bing.com/th/id/R.d1a86070645908997cee731a372854a6?rik=YC1yWwNJsB3IqA&riu=http%3a%2f%2ficons.iconarchive.com%2ficons%2fgoogle%2fnoto-emoji-activities%2f1024%2f52716-ribbon-icon.png&ehk=uImJOYdhVnp2wNmOdDclIu0l8bNqRyzMsxewsx6C3OE%3d&risl=&pid=ImgRaw&r=0">
+            <div class="card border-dark mb-3" style="max-width: 18rem;">
+              <div class="card-header">top 1 event</div>
+              <div class="card-body">
+                <h5 class="card-title"><%=user.Events[0].eventname%></h5>
+                <p class="card-text"><%=user.Events[0].deadline.getDate()+"/"+user.Events[0].deadline.getMonth()+"/"+user.Events[0].deadline.getFullYear()%></p>
+              </div>
+            </div>
+    <%}%>
+   
+     
+</div>
+</div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>var TrandingSlider = new Swiper('.tranding-slider', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      loop: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2.5,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+  </script>
+
+ 
+

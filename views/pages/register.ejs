@@ -1,0 +1,132 @@
+<% if(!currentUser) {%>
+    <% layout('layouts/boilerplate')%>
+    <% } else {%>
+      <% layout('layouts/boilerlogin')%>
+      <% } %>
+<style>
+    .col-6{
+        background-color: orange;
+        width:60%;
+        padding:10px;
+        margin-left:20%;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+   }
+   h1,label,select{
+       color:black;
+       font-size: 1.5rem;;
+   }
+   h1{
+    margin-top: 10px;
+       text-align:center;
+   }
+   .login{
+       margin-left: 25%;
+       width: 50%;
+    
+   }
+   .btn .btn-warning{
+     background-color: orange;
+     width: 50%;
+   }
+   
+   .btn .btn-warning:hover{
+     background-color: black;
+     color:black;
+   }
+    .col-6.offset-3{
+       border-radius: 2px;
+       border-color: black;
+       border-radius: 5px;
+    }
+    .btn-dark{
+        width:40%;
+        position: relative;
+        left:59%;
+    }
+</style>
+
+    <div class="col-6 offset-3 mt-2 mb-2">
+     <h1 class="text-center" style="color: black; text-transform: uppercase;">Registeration Form</h1>
+
+  <form action="/register" method="POST" novalidate class="row g-3 needs-validation">
+    <div class="mb-3">
+        <label class="form-label" for="username">Name</label>
+        <input class="form-control" type="text" id="username" name="username" required>
+        <div class="valid-feedback">
+            valid!
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" for="email">Email</label>
+        <input class="form-control" type="email" id="email" name="email" required>
+        <div class="valid-feedback">
+            valid!
+        </div>
+    </div>
+
+    
+    <div class="mb-3">
+        <select class="form-select form-select-lg " aria-label=".form-select-lg example" name="Gender"id="gender">
+            <option selected>Select gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="other">other</option>
+        </select>
+            <div class="valid-feedback">
+            valid!
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <select class="form-select form-select-lg " aria-label=".form-select-lg example" name="danceForm"id="DanceForm">
+            <option selected>Dance form</option>
+            <option value="Hip-Hop">Hip-Hop</option>
+            <option value="Contemporary">Contemporary</option>
+            <option value="Jazz">Jazz</option>
+            <option value="Classical">Classical</option>
+            <option value="Ballet">Ballet</option>
+            <option value="Free Style">Free Style</option>
+            <option value="locking-poppin">locking-poppin</option>
+            <option value="personal-training">personal-training</option>
+          </select>
+        <div class="valid-feedback">
+            valid!
+        </div>
+    </div>
+    <div class="mb-3">
+        <select class="form-select form-select-lg" aria-label=".form-select-lg example" id="day" name="day">
+            <option selected>Select a day</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+          </select>
+          <div class="valid-feedback">
+            valid!
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <select class="form-select form-select-lg " name="slot" aria-label=".form-select-lg example">
+            <option selected>Select any one slots</option>
+            <option value="1">1.9:00 am to 11:00 am</option>
+            <option value="2">2.3:00 pm to 5:00 pm</option>
+            <option value="3">3.6:00 pm to 8:00 pm</option>
+          </select>
+          <div class="valid-feedback">
+            valid!
+        </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="password">Password</label>
+        <input class="form-control" type="password" id="password" name="password" required>
+        <div class="valid-feedback">
+            valid!
+        </div>
+    </div>
+    <button class="btn btn-sm btn-dark" onclick="fun()">Register</button>
+</form>
+</div>

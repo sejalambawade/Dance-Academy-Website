@@ -1,0 +1,48 @@
+<% layout('layouts/boilerplate')%>
+<style>
+ body{
+background-color:black;
+}
+h1,label{
+    color:white;
+    font-size: 1.5rem;;
+}
+h1{
+    text-align:center;
+}
+.login{
+    margin-left: 25%;
+    width: 50%;
+ 
+}
+.btn .btn-warning{
+  background-color: orange;
+}
+
+.btn .btn-warning:hover{
+  background-color: black;
+  color:black;
+}
+</style>
+<div class="login">
+<h1>Login</h1>
+<form action="/login" method="POST" class="validated-form" novalidate>
+    <div class="mb-3">
+        <label class="form-label" for="username">Username</label>
+        <input class="form-control" type="text" id="username" name="username" required>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+
+    <div class="mb-3" >
+        <label class="form-label" for="password">Password</label>
+        <input class="form-control" type="password" id="password" name="password" required>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    
+    <button class="btn btn-warning">Login</button>
+</form>
+</div>

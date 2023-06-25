@@ -1,0 +1,72 @@
+<% layout('layouts/boilerplate')%>
+<style>
+  
+   h1,label{
+       color:white;
+       font-size: 1.5rem;;
+   }
+   h1{
+       text-align:center;
+   }
+   .event{
+    background-color:orange;
+ margin-left: 25%;
+ margin-top: 1rem;
+       width: 50%;
+       border-radius: 1rem;
+       padding: 5px;
+
+    
+    
+   }
+   .btn .btn-warning{
+     background-color: orange;
+   }
+   
+   .btn .btn-warning:hover{
+     background-color: black;
+     color:black;
+   }
+   .btn.btn-outline-dark.mt-1.mb-1:hover{
+     background-color:black;
+     color: white;
+   }
+   .btn.btn-outline-dark.mt-1.mb-1{
+     background-color: black;
+     color: orange;
+   }
+/* .aeve{
+    padding: 5px;
+    border-width: 3px;
+    border-color: white;
+    box-shadow: 2px 2px white;
+} */
+   </style>
+
+<div class="event">
+    <form class="aeve" action="/showevents/<%=i._id%>?_method=PUT" method="POST">
+        <div class="mb-3">
+            <label class="form-label" for="eventname">Event Name</label>
+            <input class="form-control" type="text" id="eventname" name="eventname" value="<%=i.eventname%>" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="eventdate">Event Date</label>
+            <input class="form-control"  id="eventdate" type="Date" name="deadline" value='<%=i.deadline.getDate()+"/"+i.deadline.getMonth()+"/"+i.deadline.getFullYear()%>' required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="eventdetails">Event Details</label>
+            <input class="form-control" type="text" id="eventdetails" name="eventdetails" value="<%=i.eventdetails%>" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <button class="btn btn-outline-dark mt-1 mb-1">Edit event</button>
+      </form>
+</div>

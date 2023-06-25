@@ -1,0 +1,97 @@
+<% if(!currentUser) {%>
+  <% layout('layouts/boilerplate')%>
+  <% } else {%>
+    <% layout('layouts/boilerlogin')%>
+    <% } %>
+  <style>
+   
+  .cd{
+    width:50%;
+      display: flex;
+      flex-direction: column;
+     border-color: black; 
+     margin:5px;
+     margin-left: 23%;
+  }
+  .card{
+    width:100%;
+    margin-left:10px ;
+    background: linear-gradient(96.2deg, rgb(255, 230, 112) 10.4%, rgb(255, 100, 100) 43.8%, rgb(0, 93, 219) 105.8%);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+  .card-title,.list-group-items{
+    width:100%;
+      font-size: 1rem;
+    
+  }
+  .card-title{
+      font-size: 1.5rem;
+  }
+  .card-header{
+    font-size: x-large;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  h5 {
+    margin: 4px;
+    padding:7px;
+    background-color:orange;
+    text-align: center;
+  }
+  .Editdelbtn{
+    display: flex;
+    justify-content:space-evenly;
+    margin:0px 4px 0px 4px;
+}
+ .list-group-item1 {
+  font-size: x-large;
+  color: black;
+  font-family: fangsong;
+    font-weight: 500;
+}
+.list-group-item{
+  font-family: fangsong;
+  border-radius: 4px;
+}
+
+  </style>
+  
+  <div class="cd">
+         <div class="card">
+          <div class="card-header">
+            <%=i.eventname%>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item1">DATE OF EVENT:</li>
+            <li class="list-group-item"> <%=i.deadline.getDate()+"/"+i.deadline.getMonth()+"/"+i.deadline.getFullYear()%></li>           
+            <li class="list-group-item1">DATE OF EVENT CREATION:</li>
+            <li class="list-group-item"> <%=i.dateIssued.getDate()+"/"+i.dateIssued.getMonth()+"/"+i.dateIssued.getFullYear()%></li>
+            <li class="list-group-item1">DETAILS OF EVENT:</li>
+            <li class="list-group-item"> <%=i.eventdetails%></li>
+          </ul>
+          <div class="Editdelbtn">
+          <a class="btn mt-3 mb-3 btn-danger" style="width:40%"  data-bs-toggle="modal" data-bs-target="#exampleModal8">DELETE</a></li>
+          <a class="btn mt-3 mb-3 btn-primary" style="width:40%"  href="/showevents/<%=i._id%>/edit">Edit Event </a> 
+        </div>
+        </div>
+
+    </div>
+    <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabe8">This event will be deleted permanantly.</h1>
+          </div>
+          <form action="/showevents/<%=i._id%>?_method=DELETE"  method="POST">
+      <div class="modal-body">
+        <p>press delete to comfirm deletion</p>
+      <div class="modal-footer">
+        <button class="btn btn-success">Delete</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </form>
+        </div>
+      </div>
+    

@@ -1,0 +1,83 @@
+<% if(!currentUser) {%>
+  <% layout('layouts/boilerplate')%>
+  <% } else {%>
+    <% layout('layouts/boilerlogin')%>
+    <% } %>
+<style>
+.cd{
+   border-color: black; 
+   display: flex;
+  justify-content: center;
+  flex-direction: row;
+  
+
+}
+.card{
+  margin-left:10px ;
+ margin:1rem;
+ background: linear-gradient(178deg, rgba(201, 234, 252, 0.51) 14.9%, rgba(139, 192, 216, 0.73) 80%);
+}
+.list-group-item1{
+    
+  font-size: 1.2rem;
+    color: black;
+   
+}
+.list-group{
+  background-color: transparent;
+}
+.card-title{
+    font-size: 1.5rem;
+}
+.card-header{
+  font-size: x-large;
+  text-align: center;
+  text-transform: uppercase;
+}
+h5 {
+  margin: 4px;
+  padding:7px;
+  background-color:orange;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ h4 {
+  margin: 4px;
+  padding:7px;
+  background-color:orange;
+  text-align: center;
+  font-style: italic;
+
+}
+.btn {
+  margin: 5px 3px;
+}
+
+</style>
+
+<h5>
+  <%=user.username%> WELCOME TO EVENTS PAGE! </h5>
+<div class="cd flex-wrap">
+ 
+        <% for(let event of user.Events) {%>  
+       <div class="card col-3" style="width: 18rem;">
+        <div class="card-header" style="background: linear-gradient(109.6deg, rgb(151, 213, 255) 11.2%, rgb(255, 155, 185) 91.1%);">
+          <%=event.eventname%>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item1" >DATE OF EVENT:</li>
+          <li class="list-group-item1" > <%=event.deadline.getDate()+"/"+event.deadline.getMonth()+"/"+event.deadline.getFullYear()%></li>           
+        </ul>
+       
+          <a class="btn  btn-primary"   href="/showevents/<%=event._id%>">View Event </a>
+          
+        </div>
+       
+
+      <% } %>
+     
+  </div>
+  <script>
+
+  </script>

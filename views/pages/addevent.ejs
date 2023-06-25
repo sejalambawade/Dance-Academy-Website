@@ -1,0 +1,80 @@
+<% if(!currentUser) {%>
+    <% layout('layouts/boilerplate')%>
+    <% } else {%>
+      <% layout('layouts/boilerlogin')%>
+      <% } %>
+<style>
+  
+   h1,label{
+       color:white;
+       font-size: 1.5rem;;
+   }
+   h1{
+       text-align:center;
+   }
+   .event{
+    background-color:orange;
+ margin-left: 25%;
+ margin-top: 1rem;
+       width: 50%;
+       border-radius: 1rem;
+       padding: 5px;   
+       box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+   }
+   .btn .btn-warning{
+     background-color: orange;
+   }
+   
+   .btn .btn-warning:hover{
+     background-color: black;
+     color:black;
+   }
+   .btn.btn-outline-dark.mt-1.mb-1:hover{
+     background-color:black;
+     color: white;
+   }
+   .btn.btn-outline-dark.mt-1.mb-1{
+     background-color: black;
+     color: orange;
+   }
+   @media (max-width:450px) {
+    .event{
+        width: 90%;
+        margin-left: 5%;
+    }
+   
+   }
+/* .aeve{
+    padding: 5px;
+    border-width: 3px;
+    border-color: white;
+    box-shadow: 2px 2px white;
+} */
+   </style>
+
+<div class="event mb-2">
+    <form class="aeve " action="/addevent" method="POST">
+        <div class="mb-3">
+            <label class="form-label" for="eventdate" >Event Date</label>
+            <input class="form-control" type="Date" id="eventdate" name="deadline" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="eventname">Event Name</label>
+            <input class="form-control" type="text" id="eventname" name="eventname" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="eventdetails">Event Details</label>
+            <input class="form-control" type="text" id="eventdetails" name="eventdetails" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <button class="btn btn-outline-dark mt-1 mb-1">Add event</button>
+      </form>
+</div>
